@@ -15,7 +15,7 @@ add_executable(hello
 )
 
 # Add pico_stdlib library which aggregates commonly used features
-target_link_libraries(hello pico_stdlib)
+target_link_libraries(hello pico_stdlib pico_stdio_usb)
 
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs(hello)
