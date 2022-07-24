@@ -6,4 +6,4 @@ cmake ..
 make
 
 echo ---
-echo If all went well, load build/hello.elf with a debugger or build/hello.uf2 on the filesystem.
+echo If all went well, load build/inkywhat.elf with a debugger or build/inkywhat.uf2 on the filesystem.

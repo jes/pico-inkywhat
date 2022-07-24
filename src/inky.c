@@ -33,7 +33,8 @@ const uint8_t black_lut[] = {
     0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-uint8_t inky_pixbuf[15000]; /* 400x300 bits */
+//uint8_t inky_pixbuf[15000]; /* 400x300 bits */
+#include "pix.h"
 
 void inky_init(void) {
     /* initialise GPIO pins */
@@ -64,10 +65,6 @@ void inky_init(void) {
     sleep_ms(100);
     gpio_put(reset_pin, 1);
     sleep_ms(100);
-
-    for (int i = 0; i < sizeof(inky_pixbuf); i++) {
-        inky_pixbuf[i] = i&0xff;
-    }
 
     _inky_send_command_data(0x12, 0, 0); /* Soft Reset */
     _inky_busy_wait();
