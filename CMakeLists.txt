@@ -11,11 +11,11 @@ pico_sdk_init()
 
 # rest of your project
 add_executable(hello
-    src/hello.c
+    src/hello.c src/inky.c
 )
 
 # Add pico_stdlib library which aggregates commonly used features
-target_link_libraries(hello pico_stdlib pico_stdio_usb)
+target_link_libraries(hello pico_stdlib pico_stdio_usb hardware_spi)
 
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs(hello)
