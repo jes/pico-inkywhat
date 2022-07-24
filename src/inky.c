@@ -93,7 +93,7 @@ void inky_toggle(void) {
     _inky_send_command(0x2c, 0x3c); /* VCOM Register, 0x3c = -1.5v? */
 
     _inky_send_command(0x3c, 0); /* Python library sends this with no comment */
-    /* For black "border colour": */
+    /* For white "border colour": */
     _inky_send_command(0x3c, 0x31); /* GS Transition Define A + VSS + LUT0 */
 
     /* Python library does something here for colour displays, which we ignore */
